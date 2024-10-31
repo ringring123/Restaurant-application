@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="30dp"
+    android:orientation="vertical"
+    tools:context=".MenuItems.QLMonAn">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="0dp"
+            android:background="@drawable/button_back"
+            android:drawableTop="@drawable/baseline_arrow_back_24"
+            android:onClick="quaylai"
+            android:paddingTop="7dp"
+            />
+
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Quản lý món ăn"
+            android:textSize="24sp"
+            android:textStyle="bold"
+           />
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:onClick="themmonan"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="0dp"
+            android:background="@drawable/button_back"
+            android:drawableTop="@drawable/baseline_add_24"
+            android:layout_marginEnd="8dp"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hình ảnh"
+            android:textStyle="bold"
+            android:paddingHorizontal="25dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên món"
+            android:textStyle="bold"
+            android:paddingHorizontal="15dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giá tiền"
+            android:textStyle="bold"
+            android:paddingHorizontal="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mô tả"
+            android:textStyle="bold"
+            android:paddingHorizontal="20dp"
+            />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/listmonan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp" />
+
+</LinearLayout>

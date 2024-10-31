@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuItems.AddMOnAn">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thêm Món Ăn"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <EditText
+        android:id="@+id/etMenuItemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Tên món ăn"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <EditText
+        android:id="@+id/etMenuItemPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Giá món ăn"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/etMenuItemName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <EditText
+        android:id="@+id/etMenuItemDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Mô tả món ăn"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@+id/etMenuItemPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <ImageView
+        android:id="@+id/ivMenuItemImage"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/darker_gray"
+        android:contentDescription="Ảnh món ăn"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@+id/etMenuItemDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <Button
+        android:id="@+id/btnSelectImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Chọn ảnh"
+        android:onClick="chonanh"
+        app:layout_constraintTop_toBottomOf="@+id/ivMenuItemImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <Button
+        android:id="@+id/btnAddMenuItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Thêm món ăn"
+        android:onClick="themmonan"
+        app:layout_constraintTop_toBottomOf="@+id/btnSelectImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

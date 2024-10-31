@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tables.EditTable"
+    android:layout_marginTop="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:text="Quản lý bàn ăn"
+                    android:gravity="center"
+                    android:textSize="30sp"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="Tên bàn: "
+                    android:textSize="20sp"/>
+                <EditText
+                    android:id="@+id/etTableName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:enabled="false"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="Số lượng khách: "
+                    android:textSize="20sp"/>
+                <EditText
+                    android:id="@+id/etTableCapacity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="Trạng thái: "
+                    android:textSize="20sp"/>
+
+                <Spinner
+                    android:id="@+id/spinnerTableStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="Ngày: "
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/etMenuDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:enabled="false"
+                    android:inputType="date" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5"
+                android:layout_marginTop="15dp">
+
+                <Button
+                    android:text="Cập nhật"
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:onClick="capnhat"/>
+
+                <View
+                    android:layout_height="0dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:text="Xóa"
+                    android:id="@+id/btnDelete"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:onClick="xoa" />
+            </TableRow>
+        </TableLayout>
+
+        <ListView
+            android:id="@+id/dailymenu"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_marginTop="16dp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5"
+            android:layout_marginTop="15dp">
+
+            <Button
+                android:text="Hoàn thành"
+                android:onClick="hoanthanh"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_gravity="center"/>
+        </TableRow>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Revenue.QLRevenue">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Doanh thu"
+            android:textSize="30dp"
+            android:gravity="center"/>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+            <EditText
+                android:id="@+id/etMenuDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:hint="Chọn ngày"
+                android:inputType="date" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+            <Button android:layout_width="0dp"
+                android:layout_weight="1"
+                android:onClick="xem"
+                android:text="Xem"/>
+            <EditText android:layout_weight="2"
+                android:layout_width="0dp"
+                android:id="@+id/total"/>
+        </TableRow>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

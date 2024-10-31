@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuItems.EditMonAn"
+    android:layout_marginTop="30dp">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sửa Món Ăn"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên món ăn:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/etMenuItemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nhập tên món ăn"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <TextView
+        android:id="@+id/textViewPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giá món ăn:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/etMenuItemName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/etMenuItemPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nhập giá món ăn"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mô tả món ăn:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/etMenuItemPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/etMenuItemDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nhập mô tả món ăn"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <ImageView
+        android:id="@+id/ivMenuItemImage"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/darker_gray"
+        android:contentDescription="Ảnh món ăn"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@+id/etMenuItemDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <Button
+        android:id="@+id/btnSelectImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Chọn ảnh"
+        android:onClick="chonanh"
+        app:layout_constraintTop_toBottomOf="@+id/ivMenuItemImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <Button
+        android:id="@+id/btnUpdateMenuItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cập nhật"
+        android:onClick="capnhatmonan"
+        app:layout_constraintTop_toBottomOf="@+id/btnSelectImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnDeleteMenuItem"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/btnDeleteMenuItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Xóa"
+        android:onClick="xoamonAn"
+        app:layout_constraintTop_toBottomOf="@+id/btnSelectImage"
+        app:layout_constraintStart_toEndOf="@+id/btnUpdateMenuItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

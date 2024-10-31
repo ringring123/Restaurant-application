@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tables.AddTable"
+    android:layout_marginTop="25dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+            <TextView android:layout_width="0dp"
+                android:layout_weight="3"
+                android:text="Thêm bàn ăn"
+                android:gravity="center"
+                android:textSize="30dp"/>
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:text="Tên bàn: "
+                android:textSize="20dp"/>
+            <EditText
+                android:id="@+id/etTableName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:text="Số lượng khách: "
+                android:textSize="20dp"/>
+            <EditText
+                android:id="@+id/etTableCapacity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:text="Trạng thái: "
+                android:textSize="20dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerTableStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:text="Ngày: "
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/etMenuDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:hint="Chọn ngày"
+                android:inputType="date" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5"
+            android:layout_marginTop="15dp">
+            <Button
+                android:text="Quay lại"
+                android:id="@+id/btnBack"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:onClick="quaylai"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="Thêm"
+                android:id="@+id/btnAddTable"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:onClick="thembanan" />
+        </TableRow>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
