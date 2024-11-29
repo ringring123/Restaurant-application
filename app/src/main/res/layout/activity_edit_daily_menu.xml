@@ -32,7 +32,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:text="Ngày: "
+                android:text="   Ngày: "
                 android:textSize="20dp" />
 
             <EditText
@@ -41,30 +41,42 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:enabled="false"
-                android:inputType="date" />
+                android:inputType="date"
+                android:drawableEnd="@drawable/calendar"/>
         </TableRow>
 
         <ListView
             android:id="@+id/dailymenu"
             android:layout_width="match_parent"
-            android:layout_height="650dp"
-            android:layout_marginBottom="20dp" />
+            android:layout_height="350dp"
+            android:layout_marginBottom="20dp"
+            android:divider="@drawable/button_border" />
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="76dp"
-            android:weightSum="3">
+            android:layout_height="wrap_content"
+            android:weightSum="5"
+            android:layout_marginTop="15dp">
 
             <Button
                 android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_weight="2"
+                android:background="@drawable/button_border"
                 android:onClick="capnhat"
-                android:text="Cập nhật" />
-            <Button
+                android:text="Cập nhật"/>
+            <View
                 android:layout_width="0dp"
                 android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btnAddTable"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/button_border"
+                android:backgroundTint="#E91E63"
                 android:onClick="xoa"
-                android:text="Xóa" />
+                android:text="Xóa"
+                android:textColor="@color/white" />
 
         </TableRow>
     </LinearLayout>

@@ -13,6 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.qlnhahang.Class.Employees;
+import com.example.qlnhahang.Main;
 import com.example.qlnhahang.MyDatabase;
 import com.example.qlnhahang.R;
 
@@ -59,7 +60,11 @@ public class AddEmployee extends AppCompatActivity {
                 String name = editTextName.getText().toString();
                 String phone = editTextPhone.getText().toString();
                 String position = editTextPosition.getText().toString();
-                double salary = Double.parseDouble(editTextSalary.getText().toString());
+                String salary = (editTextSalary.getText().toString());
+                if (name.isEmpty() || phone.isEmpty() || position.isEmpty() || salary.isEmpty()) {
+                    Toast.makeText(this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 Employees employee = new Employees(id,name,phone,position,salary);
                 myDatabase.addEmployee(employee);
                 Intent quaylai = new Intent(AddEmployee.this,QLNhanVien.class);
@@ -71,4 +76,5 @@ public class AddEmployee extends AppCompatActivity {
             Toast.makeText(this,"Vui lòng nhập đầy đủ thông tin",Toast.LENGTH_SHORT).show();
         }
     }
+
 }

@@ -41,7 +41,7 @@ public class EditEmployee extends AppCompatActivity {
         String name = getIntent().getStringExtra("name");
         String phone = getIntent().getStringExtra("phone");
         String position = getIntent().getStringExtra("position");
-        double salary = Double.parseDouble(getIntent().getStringExtra("salary"));
+        String salary =(getIntent().getStringExtra("salary"));
 
         editTextId.setText(String.valueOf(id));
         editTextName.setText(name);
@@ -54,7 +54,7 @@ public class EditEmployee extends AppCompatActivity {
         String name = editTextName.getText().toString();
         String phone = editTextPhone.getText().toString();
         String position = editTextPosition.getText().toString();
-        double salary = Double.parseDouble(editTextSalary.getText().toString());
+        String salary = editTextSalary.getText().toString();
         Employees e = new Employees(id,name,phone,position,salary);
         myDatabase.updateEmployee(e);
         finish();

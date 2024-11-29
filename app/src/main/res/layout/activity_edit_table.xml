@@ -29,6 +29,8 @@
                     android:layout_width="0dp"
                     android:layout_weight="3"
                     android:text="Quản lý bàn ăn"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
                     android:gravity="center"
                     android:textSize="30sp"/>
             </TableRow>
@@ -101,7 +103,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:enabled="false"
-                    android:inputType="date" />
+                    android:inputType="date"
+                    android:drawableEnd="@drawable/calendar"/>
             </TableRow>
 
             <TableRow
@@ -111,11 +114,12 @@
                 android:layout_marginTop="15dp">
 
                 <Button
-                    android:text="Cập nhật"
                     android:id="@+id/btnUpdate"
                     android:layout_width="0dp"
                     android:layout_weight="2"
-                    android:onClick="capnhat"/>
+                    android:background="@drawable/button_border"
+                    android:onClick="capnhat"
+                    android:text="Cập nhật" />
 
                 <View
                     android:layout_height="0dp"
@@ -123,19 +127,23 @@
                     android:layout_weight="1" />
 
                 <Button
-                    android:text="Xóa"
                     android:id="@+id/btnDelete"
                     android:layout_width="0dp"
                     android:layout_weight="2"
-                    android:onClick="xoa" />
+                    android:background="@drawable/button_border"
+                    android:backgroundTint="#E91E63"
+                    android:onClick="xoa"
+                    android:text="Xóa"
+                    android:textColor="@color/white"/>
             </TableRow>
         </TableLayout>
 
         <ListView
             android:id="@+id/dailymenu"
             android:layout_width="match_parent"
-            android:layout_height="380dp"
-            android:layout_marginTop="16dp" />
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:divider="@drawable/button_border" />
 
         <TableRow
             android:layout_width="match_parent"
@@ -144,11 +152,13 @@
             android:layout_marginTop="15dp">
 
             <Button
-                android:text="Hoàn thành"
-                android:onClick="hoanthanh"
                 android:layout_width="0dp"
+                android:layout_gravity="center"
                 android:layout_weight="5"
-                android:layout_gravity="center"/>
+                android:background="@drawable/button_border"
+                android:onClick="hoanthanh"
+                android:text="Thanh toán"
+                android:drawableTop="@drawable/check_mark"/>
         </TableRow>
     </LinearLayout>
 

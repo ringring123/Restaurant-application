@@ -60,6 +60,7 @@ public class QLTable extends AppCompatActivity {
         Intent thembanan = new Intent(QLTable.this, AddTable.class);
         startActivity(thembanan);
     }
+    //bàn chỉ nhận số
     public void quaylai(View view){
         finish();
     }

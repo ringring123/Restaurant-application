@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sửa Nhân Viên"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
@@ -140,22 +141,26 @@
         android:id="@+id/buttonSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cập nhật"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSalary"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:onClick="capnhat"/>
+        android:background="@drawable/button_border"
+        android:backgroundTint="#E91E63"
+        android:onClick="capnhat"
+        android:text="Cập nhật"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSalary" />
 
     <Button
         android:id="@+id/buttonCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Xóa"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSalary"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="24dp"
         android:layout_marginStart="16dp"
-        android:onClick="xoa"/>
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_border"
+        android:onClick="xoa"
+        android:text="Xóa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSalary" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

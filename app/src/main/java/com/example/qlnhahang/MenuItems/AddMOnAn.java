@@ -85,24 +85,52 @@ public class AddMOnAn extends AppCompatActivity {
         }
     }
 
-    private void addMenuItem() {
+
+    private boolean validateInput() {
         String name = etMenuItemName.getText().toString();
         String priceStr = etMenuItemPrice.getText().toString();
-        String description = etMenuItemDescription.getText().toString();
-        double price = Double.parseDouble(priceStr);
         String imageUriStr = imageUri != null ? imageUri.toString() : "";
 
-        if (name.isEmpty() || priceStr.isEmpty() || imageUriStr.isEmpty()) {
-            Toast.makeText(this, "Vui lòng nhập đầy đủ thông tin và chọn ảnh", Toast.LENGTH_SHORT).show();
+        if (name.isEmpty()) {
+            etMenuItemName.setError("Vui lòng nhập tên món ăn");
+            return false;
+        }
+        if (priceStr.isEmpty()) {
+            etMenuItemPrice.setError("Vui lòng nhập giá");
+            return false;
+        }
+        if (imageUriStr.isEmpty()) {
+            Toast.makeText(this, "Vui lòng chọn ảnh", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        try {
+            Double.parseDouble(priceStr);
+        } catch (NumberFormatException e) {
+            etMenuItemPrice.setError("Giá không hợp lệ");
+            return false;
+        }
+
+        return true;
+    }
+
+    private void addMenuItem() {
+        if (!validateInput()) {
             return;
         }
+
+        String name = etMenuItemName.getText().toString();
+        double price = Double.parseDouble(etMenuItemPrice.getText().toString());
+        String description = etMenuItemDescription.getText().toString();
+        String imageUriStr = imageUri != null ? imageUri.toString() : "";
 
         MenuItems menuItem = new MenuItems(name, price, description, imageUriStr);
         myDatabase.AddMenuItem(menuItem);
         Toast.makeText(this, "Thêm món ăn thành công!", Toast.LENGTH_SHORT).show();
 
-        Intent quaylai = new Intent(AddMOnAn.this, QLMonAn.class);
-        quaylai.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(quaylai);
+        Intent returnToMenuManagementIntent = new Intent(AddMOnAn.this, QLMonAn.class);
+
+        returnToMenuManagementIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(returnToMenuManagementIntent);
     }
 }

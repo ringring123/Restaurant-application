@@ -6,18 +6,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Employees.AddEmployee">
+
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
         android:text="Thêm Nhân Viên"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        app:layout_constraintHorizontal_bias="0.5" />
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/editTextId"
         android:layout_width="0dp"
@@ -81,23 +84,28 @@
         android:id="@+id/buttonSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lưu"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSalary"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:onClick="themnhanvien"/>
+        android:background="@drawable/button_border"
+        android:backgroundTint="#E91E63"
+        android:onClick="themnhanvien"
+        android:text="Lưu"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSalary" />
 
     <Button
         android:id="@+id/buttonCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hủy"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSalary"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="24dp"
         android:layout_marginStart="16dp"
-        android:onClick="quaylai"/>
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_border"
+        android:backgroundTint="@color/white"
+        android:onClick="quaylai"
+        android:text="Hủy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSalary" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

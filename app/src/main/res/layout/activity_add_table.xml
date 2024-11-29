@@ -20,7 +20,10 @@
                 android:layout_weight="3"
                 android:text="Thêm bàn ăn"
                 android:gravity="center"
-                android:textSize="30dp"/>
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
         </TableRow>
         <TableRow
             android:layout_marginTop="15dp"
@@ -90,29 +93,36 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:hint="Chọn ngày"
-                android:inputType="date" />
+                android:inputType="date"
+                android:drawableEnd="@drawable/calendar"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:weightSum="5"
             android:layout_marginTop="15dp">
+
             <Button
-                android:text="Quay lại"
                 android:id="@+id/btnBack"
                 android:layout_width="0dp"
                 android:layout_weight="2"
-                android:onClick="quaylai"/>
+                android:background="@drawable/button_border"
+                android:onClick="quaylai"
+                android:text="Quay lại" />
             <View
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content" />
+
             <Button
-                android:text="Thêm"
                 android:id="@+id/btnAddTable"
                 android:layout_width="0dp"
                 android:layout_weight="2"
-                android:onClick="thembanan" />
+                android:background="@drawable/button_border"
+                android:backgroundTint="#E91E63"
+                android:onClick="thembanan"
+                android:text="Thêm"
+                android:textColor="@color/white"/>
         </TableRow>
 
     </LinearLayout>

@@ -162,7 +162,7 @@ public class MyDatabase extends SQLiteOpenHelper {
                 String fullName = cursor.getString(1);
                 String phoneNumber = cursor.getString(2);
                 String position = cursor.getString(3);
-                double salary = cursor.getDouble(4);
+                String salary = cursor.getString(4);
                 Employees employee = new Employees(employeeId, fullName, phoneNumber, position, salary);
                 employeesList.add(employee);
             } while (cursor.moveToNext());

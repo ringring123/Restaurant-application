@@ -56,12 +56,13 @@ public class QLNhanVien extends AppCompatActivity {
 
     }
     public void quaylai(View view){
+        Intent quaylai = new Intent(QLNhanVien.this, Main.class);
+        startActivity(quaylai);
         finish();
     }
     public void themnhanvien(View view){
         Intent themnhanvien = new Intent(QLNhanVien.this, AddEmployee.class);
         startActivity(themnhanvien);
     }
-
 
 }

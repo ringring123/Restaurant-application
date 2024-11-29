@@ -64,6 +64,7 @@ public class QLMonAn extends AppCompatActivity {
     public void themmonan(View view) {
         Intent themmonan = new Intent(QLMonAn.this, AddMOnAn.class);
         startActivity(themmonan);
+
     }
 
     public void quaylai(View view) {

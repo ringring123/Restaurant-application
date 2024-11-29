@@ -12,14 +12,15 @@
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:text="Sửa Món Ăn"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        app:layout_constraintHorizontal_bias="0.5" />
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewName"
@@ -111,39 +112,46 @@
         android:id="@+id/btnSelectImage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Chọn ảnh"
-        android:onClick="chonanh"
-        app:layout_constraintTop_toBottomOf="@+id/ivMenuItemImage"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_border"
+        android:onClick="chonanh"
+        android:drawableTop="@drawable/photo_3844172"
+        android:text="Chọn ảnh"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivMenuItemImage" />
 
     <Button
         android:id="@+id/btnUpdateMenuItem"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Cập nhật"
-        android:onClick="capnhatmonan"
-        app:layout_constraintTop_toBottomOf="@+id/btnSelectImage"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnDeleteMenuItem"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp" />
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_border"
+        android:onClick="capnhatmonan"
+        android:text="Cập nhật"
+        app:layout_constraintEnd_toStartOf="@+id/btnDeleteMenuItem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSelectImage" />
 
     <Button
         android:id="@+id/btnDeleteMenuItem"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Xóa"
-        android:onClick="xoamonAn"
-        app:layout_constraintTop_toBottomOf="@+id/btnSelectImage"
-        app:layout_constraintStart_toEndOf="@+id/btnUpdateMenuItem"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_border"
+        android:backgroundTint="#E91E63"
+        android:onClick="xoamonAn"
+        android:text="Xóa"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnUpdateMenuItem"
+        app:layout_constraintTop_toBottomOf="@+id/btnSelectImage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
